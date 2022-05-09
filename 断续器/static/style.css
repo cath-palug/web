@@ -1,0 +1,715 @@
+@charset "utf-8";
+
+.page-top .header-ttl {
+  display: none;
+}
+.page-top .page-footer:before {
+  content: none;
+}
+
+@media screen and (min-width: 1000px) {
+  .page-top .page-header {
+    top: auto;
+    left: auto;
+    bottom: 50px;
+    right: 30px;
+    width: 100%;
+    padding-left: 360px;
+  }
+  .page-top .page-header-inner {
+    margin: 0 0 0 auto;
+    max-width: 860px;
+  }
+
+  .page-top .btn-gnav {
+    display: none;
+  }
+
+  .page-top .gnav {
+    position: static;
+    width: auto;
+    transform: none;
+    visibility: visible;
+    background: none;
+  }
+  .page-top .gnav-inner {
+    overflow: hidden;
+  }
+  .page-top .gnav-list {
+    text-align: right;
+  }
+  .page-top .gnav-list > li {
+    position: relative;
+    display: inline-block;
+    width: calc(25% - .5em);
+    margin: 0;
+    padding: 5px 0;
+    transform: none;
+  }
+  .page-top .gnav-list > li:nth-child(-n+4) {
+    text-align: left;
+  }
+  .page-top .gnav-list > li:nth-child(n+5) {
+    text-align: right;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .page-top .page-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+  }
+  .page-top .page-footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+}
+
+/* top contents  *****************************************/
+.haruhi {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  z-index: -1;
+}
+.haruhi-image {
+  position: absolute;
+  width: 100%;
+  height: calc(100vh - 0px);
+  background: no-repeat center top / cover;
+}
+.haruhi-image:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  content: '';
+  width: 100%;
+  height: 28%;
+  backgrond: linear-gradient(rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, 0.7) 20%, #ffffff 80%);
+}
+
+.top-music {
+  width: 28px;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+.top-ttl {
+  width: 270px;
+  position: absolute;
+    left: 50px;
+    top: 20%;
+}
+.top-ttl-onair {
+  max-width: 35vh;
+  margin: 0 auto;
+}
+.top-ttl-onair span {
+  display: block;
+  margin: 7% auto 0;
+}
+.top-block {
+  width: 270px;
+  position: absolute;
+    bottom: 60px;
+    left: 50px;
+}
+.top-block .sns li {
+  width: 38px;
+}
+.top-block .sns li + li {
+  margin-left: 20px;
+}
+.top-twitter h2 {
+  font-weight: bold;
+  font-size: 15px;
+  color: #9fa0a0;
+  letter-spacing: .1em;
+  line-height: 1;
+}
+.top-twitter .tw-inner {
+  border: 1px solid #000;
+  background: rgba(255, 255, 255, 0.6);
+  padding: 10px;
+  height: 150px; 
+  overflow: hidden;
+}
+@media screen and (min-width: 769px) and (max-width: 999px) {
+  .top-music {
+    right: 10px;
+    top: 70px;
+    width: 40px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .haruhi {
+    position: static;
+  }
+  .haruhi-image {
+    position: relative;
+    height: 500px;
+  }
+
+  .top-ttl {
+    width: 42%;
+    left: 15px;
+    top: 15%;
+  }
+  .top-music {
+    position: fixed;
+    right: 20px;
+    top: 80px;
+    width: 5%;
+    z-index: 5;
+  }
+  .top-block {
+    width: 90%;
+      position: static;
+    margin: 0 auto 15%;;
+  }
+  .top-twitter h2 {
+	  font-size: 18px;
+	  line-height: inherit;
+  }
+  .top-twitter .tw-inner {
+    height: 300px;
+  }
+  .top-twitter .tw-inner iframe {
+    width: 660px !important;
+    height: 270px !important;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .top-music {
+      right: 15px;
+      top: 60px;
+	  width: 8%;
+  }
+  .top-twitter .tw-inner iframe {
+    width: 315px !important;
+    height: 270px !important;
+  }
+}
+
+
+/******************************************
+ * CHARACTERページ
+ *****************************************/
+.character-list {
+  max-width: 740px;
+  margin: 0 auto 120px;
+}
+.character-list ul {
+  display: flex;
+  justify-content: space-between;
+}
+.character-list li {
+  max-width: 25%;
+  margin: 0 auto;
+}
+.character-list li + li {
+  margin-left: 6%;
+}
+.character-list li a {
+  position: relative;
+  display: block;
+  height: 100%;
+}
+.character-list li a .character-list-image {
+  transition: box-shadow .3s ease;
+}
+.character-list li a:hover .character-list-image {
+  box-shadow: 0 0 1em .3em rgba(214, 192, 208, .75);
+}
+.character-list-name {
+  position: absolute;
+  right: -.3em;
+  top: -1em;
+  height: 6.5em;
+  padding: .5em .1em;
+  color: #000;
+  letter-spacing: .2em;
+  background: #e54747;
+  -webkit-writing-mode: vertical-rl;
+  -ms-writing-mode: tb-rl;
+  writing-mode: vertical-rl;
+  text-align: center;
+}
+
+/* index ---------------------------------------------- */
+.page-character-index .character-list-name {
+  font-size: 22px;
+}
+
+@media screen and (max-width: 768px) {
+  .page-character-index .character-list-name {
+    font-size: 1rem;
+  }
+}
+
+/* detail ---------------------------------------------- */
+.character-detail {
+  max-width: 885px;
+  margin: 0 auto;
+}
+.character-visual {
+  padding: 0 0 40px;
+  margin: 0 -20px;
+}
+.character-visual-inner {
+  position: relative;
+  max-width: 750px;
+  margin: 0 auto;
+}
+.character-image-01 {
+  text-align: right;
+}
+.character-name {
+  position: absolute;
+  top: 50%;
+  left: 100px;
+  transform: translateY(-50%);
+}
+.character-voice {
+  position: absolute;
+  bottom: 0;
+  left: 35px;
+}
+.character-voice-txt {
+  padding: .75em 0;
+  color: #fff;
+  background: #000;
+}
+.character-voice-txt dt {
+  width: 40px;
+  text-align: center;
+}
+.character-voice-txt dt span {
+  display: inline-block;
+  line-height: 1;
+  margin-bottom: .5em;
+  padding-bottom: .5em;
+  border-bottom: 1px solid;
+}
+.character-voice-txt dd {
+  display: inline-block;
+  -webkit-writing-mode: vertical-rl;
+  -ms-writing-mode: tb-rl;
+  writing-mode: vertical-rl;
+  vertical-align: middle;
+  line-height: 40px;
+  letter-spacing: .2em;
+  font-size: 150%;
+  font-weight: 600;
+}
+.character-voice-comment-btn a {
+  display: inline-block;
+  -webkit-writing-mode: vertical-rl;
+  -ms-writing-mode: tb-rl;
+  writing-mode: vertical-rl;
+  padding: 1em 0;
+  line-height: 40px;
+  color: #fff;
+  background: #e54747;
+  cursor: pointer;
+}
+.character-voice-comment {
+  display: table;
+  table-layout: fixed;
+  margin: 30px 30px 0;
+}
+.character-voice-comment > * {
+  display: table-cell;
+  vertical-align: top;
+}
+.character-voice-comment-img {
+  width: 220px;
+  padding-right: 20px;
+}
+.character-voice-comment-txt dt {
+  margin-bottom: 1em;
+  font-size: 20px;
+  font-weight: bold;
+}
+.character-voice-comment-txt dd {
+  line-height: 2;
+}
+.character-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 750px;
+  margin: 0 auto 125px;
+}
+.character-info-txt {
+  line-height: 3em;
+  font-size: 13px;
+}
+.character-info-txt span {
+  padding-bottom: .5em;
+  letter-spacing: .1em;
+  border-bottom: 1px solid;
+}
+.character-detail .character-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 530px;
+  margin-left: 0;
+}
+.character-detail .character-list ul {
+  width: 360px;
+}
+.character-detail .character-list li {
+  max-width: 28%;
+}
+
+@media screen and (max-width: 768px) {
+  .character-visual {
+    padding: 3rem 0;
+    margin: 0 -1em;
+    background-size: auto 100%;
+  }
+  .character-image-01 img {
+    max-width: 66.66%;
+  }
+  .character-name {
+    left: 4rem;
+    width: 4.5rem;
+  }
+  .character-voice {
+    left: 1.5rem;
+  }
+  .character-voice-txt {
+    font-size: .7rem;
+  }
+  .character-voice-txt dt {
+    width: 2rem;
+  }
+  .character-voice-txt dd {
+    line-height: 2rem;
+    letter-spacing: .2em;
+  }
+  .character-voice-comment-btn a {
+    line-height: 2rem;
+  }
+  .character-voice-comment {
+    display: block;
+    margin: 1.5rem 1.5rem 0;
+  }
+  .character-voice-comment > * {
+    display: block;
+  }
+  .character-voice-comment-img {
+    width: 50%;
+    padding-right: 0;
+    margin: 0 auto 1rem;
+  }
+  .character-voice-comment-txt dt {
+    font-size: 1.2rem;
+  }
+  .character-info {
+    display: block;
+    max-width: 80%;
+    margin: 0 auto 7rem;
+  }
+  .character-info-txt {
+	  font-size: 1rem;
+  }
+  .character-image-02 {
+    margin-top: 2rem;
+    text-align: center;
+  }
+  .character-list {
+	  margin: 0 auto;
+  }
+  .character-detail .character-list {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .character-detail .character-list-caption {
+    width: 20%;
+  }
+  .character-detail .character-list ul {
+    max-width: 75%;
+  }
+}
+
+
+/******************************************
+ * STORYページ
+ *****************************************/
+.story-txtbox {
+  position: relative;
+  min-height: 782px;
+  padding-left: 50px;
+  z-index: 0;
+}
+.story-txtbox:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -20px;
+  width: 100%;
+  height: 100%;
+  background: url(../images/bg-story.png) no-repeat right top;
+  z-index: -1;
+}
+.story-ttl {
+  margin-bottom: 50px;
+}
+.story-ttl span {
+  display: inline-block;
+  line-height: 1.5;
+  font-size: 20px;
+  letter-spacing: .1em;
+  background: #000;
+  color: #fff;
+  text-shadow: 3px 2px 10px #fff;
+  padding: 0 2%;
+}
+.story-txt {
+  line-height: 2.5;
+  font-size: 16px;
+  text-shadow:
+    1px 1px 1px #fff,
+    -1px 1px 1px #fff,
+    1px -1px 1px #fff,
+   -1px -1px 1px #fff,
+    1px 1px 2px #fff,
+    -1px 1px 2px #fff,
+    1px -1px 2px #fff,
+   -1px -1px 2px #fff;]
+}
+.story-txt + .story-txt {
+  margin-top: 3em;
+}
+
+@media screen and (max-width: 768px) {
+  .story-txtbox {
+    min-height: 0;
+    padding-left: 1rem;
+    padding-bottom: 4rem;
+  }
+  .story-txtbox:before {
+    right: 0;
+    opacity: .7;
+    background-size: 100% auto;
+  }
+  .story-ttl {
+    margin-bottom: 2.75rem;
+  }
+  .story-ttl span {
+    font-size: 1.25rem;
+  }
+  .story-txt {
+    font-size: .75rem;
+  }
+  .story-txt + .story-txt {
+    margin-top: 2.5em;
+  }
+}
+
+/******************************************
+ * NEWSページ
+ *****************************************/
+.news-detail {
+	max-width: 860px;
+	margin: 0 auto;
+}
+.news-list li a {
+	display: block;
+}
+.news-list dl {
+	padding: 25px 10px;
+}
+.news-list dt {
+	margin-bottom: 5px;
+}
+.news-list dt span {
+	font-size: 14px;
+	background: #e54747;
+    padding: 3px 15px;
+}
+.news-list dd {
+	font-size: 16px;
+    letter-spacing: .1em;
+}
+.news-list li a:hover dd {
+	color: #e54747;
+	text-decoration: underline;
+	-webkit-transition: all 0.7s ease;
+	-moz-transition: all 0.7s ease;
+	-o-transition: all 0.7s ease;
+	transition: all 0.7s ease;
+}
+.news-list dd.ttl span {
+	width: 100%;
+	background: url(../images/news-border.png) no-repeat left bottom;
+	display: block;
+    padding-bottom: 20px;
+}
+.news-list dd.txt {
+	font-size: 14px;
+	padding-top: 30px;
+}
+.news-list dd.txt p {
+	margin-bottom: 20px;
+	line-height: 1.8;
+}
+.news-back {
+	text-align: center;
+	padding-top: 100px;
+}	
+.news-back a:hover {
+	color: #e54747;
+}
+ 
+@media screen and (max-width: 768px) {
+.news-list li a:after {
+	width: 94%;
+}
+.news-list dl {
+	padding: 20px 10px;
+}
+.news-list dt span,
+.news-list dd.txt {
+	font-size: 1rem;
+}
+.news-list dd {
+	font-size: 1.2rem;
+}
+}
+
+/******************************************
+ * STAFFCASTページ
+ *****************************************/
+.staffcast-detail {
+	max-width: 915px;
+	margin: 0 auto;
+}
+.staffcast-list {
+	display: inline-block;
+	vertical-align: top;
+	padding: 0 100px;
+    width: 455px;
+}
+.staffcast-list h2 {
+	margin-bottom: 50px;
+}
+.staffcast-list li {
+	margin-bottom: 50px;
+}
+.staffcast-list dt {
+	color: #e54747;
+	font-size: 14px;
+	letter-spacing: .15em;
+}
+.staffcast-list dd {
+	font-size: 14px;
+	letter-spacing: .15em;
+}
+.staffcast-list dd.sm {
+	font-size: 12px;
+}
+.staffcast-list dd.cast p {
+	display: table-cell;
+}
+.staffcast-list dd.cast > p {
+	width: 85px;
+}
+.fukidashi {
+	font-size: 11px;
+    background: #e54747;
+    padding: 1% 0;
+    margin-left: 15px;
+    font-weight: bold;
+	display: block;
+	width: 70px;
+	text-align: center;
+}
+.fukidashi:hover {
+	color: #fff;
+	background: #000;
+	-webkit-transition: all 0.7s ease;
+	-moz-transition: all 0.7s ease;
+	-o-transition: all 0.7s ease;
+	transition: all 0.7s ease;
+}
+.staffcast-list .character-voice-comment-txt dt,
+.staffcast-list .character-voice-comment-txt dd {
+	text-align: left;
+	color: #000;
+	font-family: YuGothic, '游ゴシック', sans-serif, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+}
+.staffcast-list .character-voice-comment-txt dt {
+	font-size: 20px;
+}
+.staffcast-list .character-voice-comment-txt dd {
+	font-size: 14px;
+	line-height: 2;
+}	
+
+@media screen and (max-width: 768px) {
+.staffcast-list {
+	display: block;
+    padding: 0;
+    width: 100%;
+}
+.staffcast-list + .staffcast-list {
+	margin-top: 100px;
+}
+.staffcast-list h2 img {
+	width: auto;
+}
+.staffcast-list dt {
+	font-size: 1.2rem;
+	text-align: center;
+}
+.staffcast-list dd {
+	font-size: 1.3rem;
+	text-align: center;
+}
+.staffcast-list dd.sm {
+	font-size: 1rem;
+}
+.staffcast-list dd.cast {
+	width: 55%;
+	margin: 0 auto;
+}
+.staffcast-list dd.cast > p {
+	width: 95px;
+}
+.fukidashi {
+	margin-left: 10px;
+}
+.staffcast-list .character-voice-comment-txt dt {
+	font-size: 1.2rem;
+}
+.staffcast-list .character-voice-comment-txt dd {
+	font-size: 1rem;
+}
+}
+
+.information-detail {
+	max-width: 860px;
+	margin: 0 auto;
+}
+.information-list .onair-ttl {
+	font-size: 25px;
+    letter-spacing: .1em;
+    text-shadow: 0px 10px 10px #ccc;
+}
+
+@media screen and (max-width: 768px) {
+.information-list .onair-ttl {
+	font-size: 1.5rem;
+}
+}
+
